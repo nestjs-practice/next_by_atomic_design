@@ -1,7 +1,18 @@
 import React, { SVGProps, FC } from 'react';
 
 export type IconProps = SVGProps<SVGSVGElement> & {
-  name: 'search' | 'user' | 'settings' | 'check' | 'close' | 'dropdown' | string; // 필요한 아이콘 이름 추가
+  name:
+    'search'
+    | 'user'
+    | 'settings'
+    | 'check'
+    | 'close'
+    | 'dropdown'
+    | 'arrowUp'
+    | 'arrowDown'
+    | 'leftArrow'
+    | 'rightArrow'
+    | string; // 필요한 아이콘 이름 추가
   size?: number;
 };
 
@@ -72,7 +83,51 @@ const icons: Record<IconProps['name'], FC<SVGProps<SVGSVGElement>>> = {
     >
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
     </svg>
-  )
+  ),
+  arrowUp: (props) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      {...props}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+    </svg>
+  ),
+  arrowDown: (props) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      {...props}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    </svg>
+  ),
+  leftArrow: (props) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      {...props}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+    </svg>
+  ),
+  rightArrow: (props) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      {...props}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+    </svg>
+  ),
 };
 
 const Icon: FC<IconProps> = ({ name, size = 24, ...props }) => {

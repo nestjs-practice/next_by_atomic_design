@@ -4,7 +4,7 @@ import Icon from '@/components/atoms/Icon/Icon';
 
 interface NavigationItemProps {
   href: string;
-  icon: 'home' | 'search' | 'user' | 'settings'; // Icon 이름 추가
+  icon: string; // Icon 이름 추가
   label: string;
 }
 

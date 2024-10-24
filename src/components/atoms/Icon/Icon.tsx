@@ -1,7 +1,7 @@
 import React, { SVGProps, FC } from 'react';
 
 export type IconProps = SVGProps<SVGSVGElement> & {
-  name: 'search' | 'user' | 'settings' | 'check' | 'close'; // 필요한 아이콘 이름 추가
+  name: 'search' | 'user' | 'settings' | 'check' | 'close' | 'dropdown' | string; // 필요한 아이콘 이름 추가
   size?: number;
 };
 
@@ -62,6 +62,17 @@ const icons: Record<IconProps['name'], FC<SVGProps<SVGSVGElement>>> = {
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
     </svg>
   ),
+  dropdown: (props) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      {...props}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    </svg>
+  )
 };
 
 const Icon: FC<IconProps> = ({ name, size = 24, ...props }) => {

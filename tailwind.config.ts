@@ -13,6 +13,11 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      width: {
+        '5/12': '41.666667%',
+        '7/12': '58.333333%',
+        // 필요에 따라 추가
+      },
     },
   },
   plugins: [],
